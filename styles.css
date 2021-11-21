@@ -1,0 +1,125 @@
+*{
+  border: 1px solid red;
+}
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+
+body, 
+h1{
+  margin: 0;
+}
+
+body{
+  min-height: 100vh; 
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  font-size:  32px;
+  font-family: 'Spartan', sans-serif;;
+}
+
+:root{
+
+/* theme 1 */
+--very-dark-blue: hsl(222, 26%, 31%);
+--very-dark-blue-2: hsl(223, 31%, 20%);
+--very-dark-blue-3: hsl(224, 36%, 15%);
+
+--des-dark-blue: hsl(225, 21%, 49%);
+--des-dark-blue-2: hsl(224, 28%, 35%);
+
+--red: hsl(6, 63%, 50%);
+--dark-red: hsl(6, 70%, 34%);
+
+--light-grayish-orange: hsl(30, 25%, 89%);
+--grayish-orange: hsl(28, 16%, 65%);
+
+--text-dark-blue: hsl(221, 14%, 31%);
+
+  /* theme 2 */
+
+--light-gray: hsl(0, 0%, 90%);
+--grayish-red: hsl(0, 5%, 81%);
+--very-light-gray: hsl(0, 0%, 93%);
+
+--dark-cyan: hsl(185, 42%, 37%);
+--very-cyan: hsl(185, 58%, 25%);
+
+-orange: hsl(25, 98%, 40%);
+--dark-orange: hsl(25, 99%, 27%);
+
+--yellow: hsl(45, 7%, 89%);
+--grayish-orange: hsl(35, 11%, 61%);
+
+--dark-yellow: hsl(60, 10%, 19%);
+
+  /* theme 3 */
+
+--violet: hsl(268, 75%, 9%);
+--dark-violet: hsl(268, 71%, 12%);
+
+--pure-cyan: hsl(176, 100%, 44%);
+--soft-cyan: hsl(177, 92%, 70%);
+
+--very-dark-violet: hsl(268, 47%, 21%);
+--dark-magenta: hsl(290, 70%, 36%);
+
+--light-yellow: hsl(52, 100%, 62%);
+--very-dark-blue: hsl(198, 20%, 13%);
+}
+
+.calculator{
+  height: 815px;
+  max-width: 500px;
+  padding: 1em;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.calculator__output{
+  min-height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+
+.calculator__body{
+  height: 74%;
+}
+
+.calculator__key{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-sm{
+  font-size: 1.5rem;
+}
+
+
+/* Footer section */
+.attribution { 
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: 11px; 
+  text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+.spaces-2{
+  grid-column: span 2;
+}

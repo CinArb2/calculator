@@ -94,6 +94,7 @@ body{
   padding-right: 1rem;
   background-color: var(--very-dark-blue-3);
   border-radius: 20px;
+  color: white;
 }
 
 .calculator__body{

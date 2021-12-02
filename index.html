@@ -12,38 +12,37 @@
 </head>
 <body>
   <section class="calculator">
-    <header class="calculator__header flex">
+    <header class="calculator__header">
       <h1 class="calculator__title text-white">calc</h1>
-      <div class="calculator__theme">theme</div>
     </header>
-    <div class="calculator__output"></div>
+    <div class="calculator__output flex">0</div>
     <div class="calculator__body grid">
-      <div class="calculator__key theme1-key" data-number>7</div>
-      <div class="calculator__key theme1-key" data-number>8</div>
-      <div class="calculator__key theme1-key" data-number>9</div>
-      <div class="calculator__key text-sm text-white" data-request>DEL</div>
-      <div class="calculator__key theme1-key" data-number>4</div>
-      <div class="calculator__key theme1-key" data-number>5</div>
-      <div class="calculator__key theme1-key" data-number>6</div>
-      <div class="calculator__key theme1-key" data-operator>+</div>
-      <div class="calculator__key theme1-key" data-number>1</div>
-      <div class="calculator__key theme1-key" data-number>2</div>
-      <div class="calculator__key theme1-key" data-number>3</div>
-      <div class="calculator__key theme1-key" data-operator>-</div>
-      <div class="calculator__key theme1-key" data-point>.</div>
-      <div class="calculator__key theme1-key" data-number>0</div>
-      <div class="calculator__key theme1-key" data-operator>/</div>
-      <div class="calculator__key theme1-key" data-operator>x</div>
-      <div class="calculator__key text-sm spaces-2 theme1-key text-white" data-request>RESET</div>
-      <div class="calculator__key text-sm spaces-2 theme1-key red text-white" data-request>=</div>
+      <button data-action='number'>7</button>
+      <button data-action='number'>8</button>
+      <button data-action='number'>9</button>
+      <button class="text-white btn--blue" data-action='DEL'>DEL</button>
+      <button data-action='number'>4</button>
+      <button data-action='number'>5</button>
+      <button data-action='number'>6</button>
+      <button data-action='add'>+</button>
+      <button data-action='number'>1</button>
+      <button data-action='number'>2</button>
+      <button data-action='number'>3</button>
+      <button data-action='subtract'>-</button>
+      <button data-action='decimal'>.</button>
+      <button data-action='number'>0</button>
+      <button data-action='divide'>/</button>
+      <button data-action='multiply'>x</button>
+      <button class="spaces-2 text-white btn--blue" data-action='reset'>RESET</button>
+      <button class="spaces-2 text-white btn--red" data-action='calculate'>=</button>
     </div>
   </section>
 
   
-  <div class="attribution">
+  <div class="attribution text-white">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Cindy A</a>.
   </div>
-  <script src="./script.js"></script>
+  <script src="./calculator.js"></script>
 </body>
 </html>

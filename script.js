@@ -5,8 +5,6 @@ let total =0;
 let container = document.querySelector('.calculator__output');
 
 
-
-  
 const resetAll = () =>{
   firstNumber = [];
   secondNumber = [];
@@ -88,7 +86,6 @@ const otherRequest = [
   {
     request: '=',
     reques() {
-
       if (secondNumber.length === 0) {
         container.innerHTML = firstNumber.join('');
       } else {
@@ -104,11 +101,10 @@ const otherRequest = [
 
 
 document.addEventListener('click', (e) => {
-  
   if (container.innerHTML === '') {
     if (e.target.matches('[data-number]')) {
       firstNumber.push(e.target.innerHTML)
-      container.innerHTML = firstNumber.join('');
+      container.innerHTML = firstNumber.join('')
     }
     if (e.target.matches('[data-point]')) {
         firstNumber.push('.')

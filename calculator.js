@@ -54,6 +54,7 @@ calculator.addEventListener('click', (e) => {
     const operator = calculator.dataset.operator
     
     if (firstValue && operator && previousKeyType !== 'operator') {
+      console.log('hello')
       const calcValue = calculate(firstValue, operator, secondValue);
       displayNum.textContent = calcValue;
       calculator.dataset.firstValue = calcValue;
@@ -75,8 +76,8 @@ calculator.addEventListener('click', (e) => {
 
   if (action === 'reset') {
     displayNum.textContent = '0';
-    calculator.dataset.operator = ' ';
-    calculator.dataset.firstValue = ' ';
+    calculator.dataset.operator = '';
+    calculator.dataset.firstValue = '';
     calculator.dataset.previousKeyType = 'reset';
   }
 

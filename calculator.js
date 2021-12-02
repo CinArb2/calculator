@@ -1,32 +1,40 @@
 const displayNum = document.querySelector('.calculator__output')
 const calculator = document.querySelector('.calculator__body')
 
-const calculate = (firstValue, operator, secondValue) => {
+const calculate = (n1, operator, n2) => {
   let result = ' ';
+  const firstValue = parseFloat(n1);
+  const secondValue = parseFloat(n2);
+
   switch (operator) {
     case 'add':
-      result = parseFloat(firstValue) + parseFloat(secondValue);
+      result = firstValue + secondValue;
       break;
     case 'subtract':
-      result = parseFloat(firstValue) - parseFloat(secondValue);
+      result = firstValue - secondValue;
       break;
     case 'multiply':
-      result = parseFloat(firstValue) * parseFloat(secondValue);
+      result = firstValue * secondValue;
       break;
     case 'divide':
-      result = parseFloat(firstValue) / parseFloat(secondValue);
+      result = firstValue / secondValue;
   }
   return result;
 }
 
 calculator.addEventListener('click', (e) => {
+  
   const key = e.target;
   const action = e.target.dataset.action;
   const displayedNum = displayNum.textContent;
   let previousKeyType = calculator.dataset.previousKeyType;
   
+
   if (action === 'number') {
-    if (displayNum.textContent === '0' || previousKeyType === 'operator' || previousKeyType === 'calculate') {
+    if (displayNum.textContent === '0' ||
+      previousKeyType === 'operator' ||
+      previousKeyType === 'calculate'
+    ) {
       displayNum.textContent = key.textContent;
     } else {
       displayNum.textContent = displayedNum + key.textContent;
@@ -66,7 +74,6 @@ calculator.addEventListener('click', (e) => {
 
   if (action === 'decimal') {
     if (!displayNum.textContent.includes('.') && previousKeyType !== 'operator') {
-      console.log('hola')
       displayNum.textContent = displayedNum + '.';
     } else if (previousKeyType === 'operator' || previousKeyType === 'calculate') {
       displayNum.textContent = '0.';
